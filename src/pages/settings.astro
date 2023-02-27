@@ -1,0 +1,51 @@
+---
+import Landing from "../layouts/Landing.astro";
+
+import '../styles/global.scss';
+import "../styles/settings.scss";
+
+---
+
+<Landing 
+	title="Settings | LNP Video"
+	description="LNP Video is the new website for watching videos from LNP Group"
+	twitterCard="summary_large_image"
+	twitterSite="@LNP_Group"
+	twitterCreator="@LNP_Group"
+	twitterTitle="Settings | LNP Video"
+	twitterDescription="LNP Video is the new website for watching videos from LNP Group"
+	twitterImage="https://video.lnp-group.com/images/posters/lnp-video.png"
+	twitterImageAlt="LNP Video"
+	ogTitle="Settings | LNP Video"
+	ogDescription="LNP Video is the new website for watching videos from LNP Group"
+	ogImage="https://video.lnp-group.com/images/posters/lnp-video.png"
+	ogImageAlt="LNP Video"
+	ogUrl="https://video.lnp-group.com/settings"
+	ogSiteName="LNP Video"
+	ogType="website"
+	ogLocale="en_US"
+	ogLocaleAlternate="ro_RO"
+	canonical="https://video.lnp-group.com/settings"
+	alternate="https://video.lnp-group.com/ro-ro/setări"
+>
+    <main>
+        <h1>Settings</h1>
+        <h2>Language</h2>
+        <div class="language" id="language">
+            English
+            <div class="language-picker" id="language-picker">
+                <a href="/">English</a>
+                <a href="/ro-ro/">Română</a>
+            </div>
+        </div>
+
+        <h2>Theme</h2>
+        <select name="theme" id="theme">
+            <option value="light">Light</option>
+            <option value="dark">Dark</option>
+        </select>
+    </main>
+
+    <script type="text/javascript" src="/scripts/settings.js"></script>
+
+</Landing>

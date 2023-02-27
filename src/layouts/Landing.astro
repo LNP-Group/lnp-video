@@ -1,0 +1,68 @@
+---
+import Footer from '../components/Footer.astro';
+import Menu from '../components/Menu.astro';
+
+import "../styles/global.scss";
+
+export interface Props {
+    title: string;
+    description: string;
+    twitterCard: string;
+    twitterSite: string;
+    twitterCreator: string;
+    twitterTitle: string;
+    twitterDescription: string;
+    twitterImage: string;
+    twitterImageAlt: string;
+    ogTitle: string;
+    ogDescription: string;
+    ogImage: string;
+    ogImageAlt: string;
+    ogUrl: string;
+    ogSiteName: string;
+    ogType: string;
+    ogLocale: string;
+    ogLocaleAlternate: string;
+    canonical: string;
+    alternate: string;
+}
+
+const { title, description, twitterCard, twitterSite, twitterCreator, twitterTitle, twitterDescription, twitterImage, twitterImageAlt, ogTitle, ogDescription, ogImage, ogImageAlt, ogUrl, ogSiteName, ogType, ogLocale, ogLocaleAlternate, canonical, alternate } = Astro.props;
+
+---
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" type="image/svg+xml" href="/images/icons/favicon.svg" />
+        <meta name="description" content={description} />
+        <meta name="twitter:card" content={twitterCard} />
+        <meta name="twitter:site" content={twitterSite} />
+        <meta name="twitter:creator" content={twitterCreator} />
+        <meta name="twitter:title" content={twitterTitle} />
+        <meta name="twitter:description" content={twitterDescription} />
+        <meta name="twitter:image" content={twitterImage} />
+        <meta name="twitter:image:alt" content={twitterImageAlt} />
+        <meta property="og:title" content={ogTitle} />
+        <meta property="og:description" content={ogDescription} />
+        <meta property="og:image" content={ogImage} />
+        <meta property="og:image:alt" content={ogImageAlt} />
+        <meta property="og:url" content={ogUrl} />
+        <meta property="og:site_name" content={ogSiteName} />
+        <meta property="og:type" content={ogType} />
+        <meta property="og:locale" content={ogLocale} />
+        <meta property="og:locale:alternate" content={ogLocaleAlternate} />
+        <link rel="canonical" href={canonical} />
+        <link rel="alternate" href={alternate} />
+        <title>{title}</title>
+        <script type="text/javascript" src="/scripts/script.js" defer></script>
+    </head>
+    <body>
+        <Menu />
+        <slot />
+        <Footer />
+    </body>
+
+</html>

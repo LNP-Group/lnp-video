@@ -1,0 +1,50 @@
+---
+import LandingRo from "../../layouts/LandingRo.astro";
+
+import "../../styles/settings.scss";
+
+---
+
+<LandingRo 
+	title="Setări | LNP Video"
+	description="LNP Video is the new website for watching videos from LNP Group"
+	twitterCard="summary_large_image"
+	twitterSite="@LNP_Group"
+	twitterCreator="@LNP_Group"
+	twitterTitle="Setări | LNP Video"
+	twitterDescription="LNP Video is the new website for watching videos from LNP Group"
+	twitterImage="https://video.lnp-group.com/images/posters/lnp-video.png"
+	twitterImageAlt="LNP Video"
+	ogTitle="Setări | LNP Video"
+	ogDescription="LNP Video is the new website for watching videos from LNP Group"
+	ogImage="https://video.lnp-group.com/images/posters/lnp-video.png"
+	ogImageAlt="LNP Video"
+	ogUrl="https://video.lnp-group.com/ro-ro/setări"
+	ogSiteName="LNP Video"
+	ogType="website"
+	ogLocale="ro_RO"
+	ogLocaleAlternate="en_US"
+	canonical="https://video.lnp-group.com/ro-ro/setări"
+	alternate="https://video.lnp-group.com/settings"
+>
+	<main>
+		<h1>Setări</h1>
+		<h2>Limbă</h2>
+		<div class="language" id="language">
+			Română
+			<div class="language-picker" id="language-picker">
+				<a href="/">English</a>
+				<a href="/ro-ro/">Română</a>
+			</div>
+		</div>
+
+		<h2>Temă</h2>
+		<select name="theme" id="theme">
+			<option value="light">Luminoasă</option>
+			<option value="dark">Întunecată</option>
+		</select>
+	</main>
+
+	<script type="text/javascript" src="/scripts/settings.js"></script>
+
+</LandingRo>
